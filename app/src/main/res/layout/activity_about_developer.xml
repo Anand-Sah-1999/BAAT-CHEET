@@ -1,0 +1,128 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".AboutDeveloper">
+
+    <LinearLayout
+        android:id="@+id/relativeLayout1"
+        android:layout_width="match_parent"
+        android:orientation="vertical"
+        android:weightSum="1"
+        android:layout_height="250dp" />
+
+    <TextView
+        android:textFontWeight="1"
+        android:layout_width="match_parent"
+        android:layout_height="250dp"
+        android:background="@drawable/register_background"/>
+
+    <LinearLayout
+        android:weightSum="1"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@id/relativeLayout1" />
+
+
+    <com.google.android.material.floatingactionbutton.FloatingActionButton
+        android:id="@+id/fab"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:fabCustomSize="70dp"
+        app:maxImageSize="35dp"
+        android:backgroundTint="#6ECCD5"
+        android:layout_gravity="center"
+        android:layout_marginLeft="240dp"
+        android:layout_marginTop="300dp"
+        android:clickable="true"
+        android:onClick="call"/>
+
+    <com.google.android.material.floatingactionbutton.FloatingActionButton
+        android:id="@+id/fab2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:fabCustomSize="70dp"
+        app:maxImageSize="35dp"
+        android:backgroundTint="#6ECCD5"
+        android:layout_gravity="center"
+        android:layout_marginLeft="50dp"
+        android:layout_marginTop="300dp"
+        android:clickable="true"
+        android:onClick="text"/>
+
+    <de.hdodenhof.circleimageview.CircleImageView
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        android:id="@+id/imageBackground1"
+        android:layout_width="260dp"
+        android:layout_height="260dp"
+        android:src="@drawable/anand_dp"
+        app:civ_border_color="#FFFFFF"
+        app:civ_border_width="15dp"
+        android:layout_marginTop="120dp"
+        android:layout_marginLeft="50dp"/>
+
+    <TextView
+        android:id="@+id/name"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:layout_below="@+id/imageBackground1"
+        android:text="Anand Sah"
+        android:textSize="20dp"
+        android:fontFamily="@font/artifika"
+        android:textStyle="bold"
+        android:layout_marginLeft="120dp"/>
+
+    <TextView
+        android:id="@+id/location"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/name"
+        android:layout_marginTop="10dp"
+        android:text="Shantragachi, Howrah"
+        android:textSize="15dp"
+        android:drawableLeft="@drawable/ic_location_on_black_24dp"
+        android:drawablePadding="5dp"
+        android:fontFamily="@font/artifika"
+        android:layout_marginLeft="70dp"/>
+
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@id/location">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical" >
+
+            <TextView
+                android:id="@+id/source"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/location"
+                android:layout_marginTop="40dp"
+                android:text="Source of help:"
+                android:textSize="18dp"
+                android:textStyle="bold"
+                android:fontFamily="@font/artifika"
+                android:layout_marginLeft="10dp"/>
+
+            <TextView
+                android:id="@+id/additionalInfo"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/source"
+                android:layout_marginTop="5dp"
+                android:text="YouTube , StackOverflow"
+                android:textSize="15dp"
+                android:fontFamily="@font/artifika"
+                android:layout_marginLeft="10dp"/>
+
+        </LinearLayout>
+    </ScrollView>
+
+</RelativeLayout>

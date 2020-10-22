@@ -1,0 +1,135 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context=".Story_Fragment">
+
+    <RelativeLayout
+        android:id="@+id/myStoryLayout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <de.hdodenhof.circleimageview.CircleImageView
+            xmlns:app="http://schemas.android.com/apk/res-auto"
+            android:id="@+id/story_pic"
+            android:layout_width="60dp"
+            android:layout_height="60dp"
+            android:layout_margin="10dp"
+            android:src="@drawable/default_dp"
+            app:civ_border_width="2dp"
+            app:civ_border_color="#FFFFFF"/>
+
+        <TextView
+            android:id="@+id/displayName"
+            android:layout_width="200dp"
+            android:layout_height="wrap_content"
+            android:layout_toEndOf="@id/story_pic"
+            android:fontFamily="@font/artifika"
+            android:text="My Story"
+            android:paddingTop="10dp"
+            android:paddingStart="10dp"
+            android:layout_marginTop="10dp"
+            android:textColor="#7A7979"
+            android:textSize="17sp"
+            android:textStyle="bold" />
+
+        <TextView
+            android:id="@+id/dateAndTime"
+            android:layout_width="250dp"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/displayName"
+            android:layout_marginEnd="35dp"
+            android:layout_toStartOf="@+id/deleteStory"
+            android:layout_toEndOf="@id/story_pic"
+            android:fontFamily="@font/artifika"
+            android:paddingStart="10dp"
+            android:paddingTop="4dp"
+            android:text="Tap to add story"
+            android:textColor="#7A7979"
+            android:textSize="12sp" />
+
+        <ImageView
+            android:id="@+id/deleteStory"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentEnd="true"
+            android:layout_marginRight="20dp"
+            android:layout_marginTop="25dp"
+            android:background="@drawable/ic_view_my_all_status_24dp" />
+    </RelativeLayout>
+
+    <TextView
+        android:id="@+id/addStoryTextView"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Friend's Story"
+        android:textSize="@dimen/_12sdp"
+        android:layout_marginTop="@dimen/_5sdp"
+        android:layout_marginBottom="@dimen/_5sdp"
+        android:fontFamily="@font/artifika"
+        android:paddingLeft="@dimen/_10sdp"
+        android:background="#E4E2E2"
+        android:textColor="#3E3D3D"
+        android:layout_below="@id/myStoryLayout"/>
+
+
+    <androidx.coordinatorlayout.widget.CoordinatorLayout
+        android:id="@+id/friendsStoryLayout"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@id/addStoryTextView">
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/storyRecyclerView"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"/>
+
+        <com.google.android.material.floatingactionbutton.FloatingActionButton
+            android:id="@+id/addStoryFloatingButton"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:clickable="true"
+            android:layout_gravity="bottom|end"
+            android:layout_marginBottom="30dp"
+            android:layout_marginRight="20dp"
+            android:src="@drawable/ic_photo_camera_white_24dp" />
+
+    </androidx.coordinatorlayout.widget.CoordinatorLayout>
+
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <ImageView
+            android:id="@+id/showBlackBackground"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="@android:color/black"
+            android:visibility="gone" />
+
+        <ImageView
+            android:id="@+id/showFullImage"
+            android:layout_width="match_parent"
+            android:layout_height="400dp"
+            android:layout_marginTop="100dp"
+            android:background="@android:color/white"
+            android:visibility="gone" />
+
+        <ImageView
+            android:id="@+id/backButton"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="20dp"
+            android:layout_marginTop="20dp"
+            android:paddingRight="300dp"
+            android:paddingBottom="45dp"
+            android:src="@drawable/ic_arrow_back_white_24dp"
+            android:visibility="gone" />
+
+    </RelativeLayout>
+
+</RelativeLayout>

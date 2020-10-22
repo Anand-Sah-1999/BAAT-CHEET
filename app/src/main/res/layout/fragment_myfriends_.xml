@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@android:color/white"
+    tools:context=".MyFriends_Fragment">
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/myFriendsRecyclerView"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent" />
+
+    <RelativeLayout
+        android:id="@+id/emptyMyFriendsLayout"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginTop="100dp"
+        android:layout_marginBottom="100dp"
+        android:visibility="gone">
+
+        <ImageView
+            android:id="@+id/noResultImage"
+            android:layout_width="match_parent"
+            android:layout_height="300dp"
+            android:src="@drawable/no_result_found_new"/>
+
+        <TextView
+            android:id="@+id/emptyFriendListTextView"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/noResultImage"
+            android:text="Friend list is empty"
+            android:gravity="center"
+            android:backgroundTint="@android:color/white"
+            android:fontFamily="@font/artifika"
+            android:textSize="20dp"/>
+
+        <Button
+            android:id="@+id/findFriends"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="find friends"
+            android:textColor="@android:color/white"
+            android:layout_marginTop="30dp"
+            android:layout_marginLeft="20dp"
+            android:layout_marginRight="20dp"
+            android:backgroundTint="#FF04D3BE"
+            android:background="@drawable/button_background"
+            android:stateListAnimator="@null"
+            android:layout_below="@id/emptyFriendListTextView"/>
+    </RelativeLayout>
+</FrameLayout>

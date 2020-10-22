@@ -1,0 +1,48 @@
+{
+  "project_info": {
+    "project_number": "945009431998",
+    "firebase_url": "https://baat-cheet-b81fa.firebaseio.com",
+    "project_id": "baat-cheet-b81fa",
+    "storage_bucket": "baat-cheet-b81fa.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:945009431998:android:730931496e382195cb15ef",
+        "android_client_info": {
+          "package_name": "com.example.baatcheet"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "945009431998-kqk19bgedruk13q65on9304llp3g63d9.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.example.baatcheet",
+            "certificate_hash": "447f5df60e711fa2f932cb89b6aa78d64634208a"
+          }
+        },
+        {
+          "client_id": "945009431998-15r2a93lrv2ku4e6dtsul7ri5egnm7g1.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCwGI7IglkEmIaVxgddStjfEhWFr-3fjLE"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "945009431998-15r2a93lrv2ku4e6dtsul7ri5egnm7g1.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

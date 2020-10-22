@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@android:color/white"
+    tools:context=".Friend_Requests_Display">
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/recyclerView"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginBottom="30dp"/>
+
+
+    <RelativeLayout
+        android:id="@+id/emptyMyFriendsLayout"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginTop="100dp"
+        android:layout_marginBottom="100dp">
+
+        <ImageView
+            android:id="@+id/noResultImage"
+            android:layout_width="match_parent"
+            android:layout_height="300dp"
+            android:src="@drawable/no_result_found_new"/>
+
+        <TextView
+            android:id="@+id/emptyFriendListTextView"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/noResultImage"
+            android:text="No new friend request"
+            android:gravity="center"
+            android:background="@android:color/white"
+            android:fontFamily="@font/artifika"
+            android:textSize="20dp"/>
+
+    </RelativeLayout>
+
+</RelativeLayout>
